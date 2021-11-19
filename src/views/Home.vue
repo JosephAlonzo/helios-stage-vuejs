@@ -54,8 +54,9 @@ export default {
     },
     scroll() {
       window.onscroll = () => {
-        let bottomOfWindow = Math.max( window.pageYOffset,document.documentElement.scrollTop,document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight;
+        let bottomOfWindow = Math.floor( Math.max( window.pageYOffset,document.documentElement.scrollTop,document.body.scrollTop) + window.innerHeight) === Math.floor(document.documentElement.offsetHeight);
         if (bottomOfWindow) {
+          console.log("scroll")
           this.getList();
         }
       };
