@@ -56,7 +56,6 @@ export default {
       window.onscroll = () => {
         let bottomOfWindow = Math.floor( Math.max( window.pageYOffset,document.documentElement.scrollTop,document.body.scrollTop) + window.innerHeight) === Math.floor(document.documentElement.offsetHeight);
         if (bottomOfWindow) {
-          console.log("scroll")
           this.getList();
         }
       };
